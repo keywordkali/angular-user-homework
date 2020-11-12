@@ -1,0 +1,28 @@
+<div>
+<h1>User List</h1>
+<table [ngClass]= "tableStyle">
+    <tr>
+        <th>ID</th>
+        <th>UserName</th>
+        <th>Password</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>PhoneNumber</th>
+        <th>Email</th>
+        <th>Reviewer?</th>
+        <th>Admin?</th>
+    </tr>
+
+    <tr *ngFor= "let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.userName }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.phoneNumber }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.reviewer?"Yes":"No" }}</td>
+        <td>{{ user.admin?"Yes":"No" }}</td>
+</tr>
+</table>
+</div>
